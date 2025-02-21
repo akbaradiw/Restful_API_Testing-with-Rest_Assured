@@ -1,0 +1,64 @@
+-------------------------------------------------------------------------------
+Test set: restassured.ValidationTest
+-------------------------------------------------------------------------------
+Tests run: 7, Failures: 6, Errors: 0, Skipped: 0, Time elapsed: 4.83 s <<< FAILURE! - in restassured.ValidationTest
+addObjects(restassured.ValidationTest)  Time elapsed: 2.42 s  <<< FAILURE!
+java.lang.RuntimeException: 
+com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field "timestamp" (class com.example.model.ResponseItem), not marked as ignorable (5 known properties: "data", "name", "updatedAt", "id", "createdAt"])
+ at [Source: (String)"{"timestamp":"2025-02-21T17:44:18.468+00:00","status":405,"error":"Method Not Allowed","path":"/objects/add"}"; line: 1, column: 15] (through reference chain: com.example.model.ResponseItem["timestamp"])
+	at restassured.ValidationTest.addObjects(ValidationTest.java:49)
+Caused by: com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: 
+Unrecognized field "timestamp" (class com.example.model.ResponseItem), not marked as ignorable (5 known properties: "data", "name", "updatedAt", "id", "createdAt"])
+ at [Source: (String)"{"timestamp":"2025-02-21T17:44:18.468+00:00","status":405,"error":"Method Not Allowed","path":"/objects/add"}"; line: 1, column: 15] (through reference chain: com.example.model.ResponseItem["timestamp"])
+	at restassured.ValidationTest.addObjects(ValidationTest.java:49)
+
+deleteObjects(restassured.ValidationTest)  Time elapsed: 0.205 s  <<< FAILURE!
+java.lang.RuntimeException: 
+com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field "error" (class com.example.model.ResponseItem), not marked as ignorable (5 known properties: "data", "name", "updatedAt", "id", "createdAt"])
+ at [Source: (String)"{"error":"7 is a reserved id and the data object of it cannot be deleted. You can create your own new object via POST request and try to send a DELETE request with new generated object id."}"; line: 1, column: 11] (through reference chain: com.example.model.ResponseItem["error"])
+	at restassured.ValidationTest.deleteObjects(ValidationTest.java:244)
+Caused by: com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: 
+Unrecognized field "error" (class com.example.model.ResponseItem), not marked as ignorable (5 known properties: "data", "name", "updatedAt", "id", "createdAt"])
+ at [Source: (String)"{"error":"7 is a reserved id and the data object of it cannot be deleted. You can create your own new object via POST request and try to send a DELETE request with new generated object id."}"; line: 1, column: 11] (through reference chain: com.example.model.ResponseItem["error"])
+	at restassured.ValidationTest.deleteObjects(ValidationTest.java:244)
+
+getAllObjects(restassured.ValidationTest)  Time elapsed: 0.215 s  <<< FAILURE!
+java.lang.RuntimeException: 
+com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot deserialize value of type `com.example.model.ResponseItem` from Array value (token `JsonToken.START_ARRAY`)
+ at [Source: (String)"[{"id":"1","name":"Google Pixel 6 Pro","data":{"color":"Cloudy White","capacity":"128 GB"}},{"id":"2","name":"Apple iPhone 12 Mini, 256GB, Blue","data":null},{"id":"3","name":"Apple iPhone 12 Pro Max","data":{"color":"Cloudy White","capacity GB":512}},{"id":"4","name":"Apple iPhone 11, 64GB","data":{"price":389.99,"color":"Purple"}},{"id":"5","name":"Samsung Galaxy Z Fold2","data":{"price":689.99,"color":"Brown"}},{"id":"6","name":"Apple AirPods","data":{"generation":"3rd","price":120}},{"id":"7"[truncated 739 chars]; line: 1, column: 1]
+	at restassured.ValidationTest.getAllObjects(ValidationTest.java:147)
+Caused by: com.fasterxml.jackson.databind.exc.MismatchedInputException: 
+Cannot deserialize value of type `com.example.model.ResponseItem` from Array value (token `JsonToken.START_ARRAY`)
+ at [Source: (String)"[{"id":"1","name":"Google Pixel 6 Pro","data":{"color":"Cloudy White","capacity":"128 GB"}},{"id":"2","name":"Apple iPhone 12 Mini, 256GB, Blue","data":null},{"id":"3","name":"Apple iPhone 12 Pro Max","data":{"color":"Cloudy White","capacity GB":512}},{"id":"4","name":"Apple iPhone 11, 64GB","data":{"price":389.99,"color":"Purple"}},{"id":"5","name":"Samsung Galaxy Z Fold2","data":{"price":689.99,"color":"Brown"}},{"id":"6","name":"Apple AirPods","data":{"generation":"3rd","price":120}},{"id":"7"[truncated 739 chars]; line: 1, column: 1]
+	at restassured.ValidationTest.getAllObjects(ValidationTest.java:147)
+
+getListObjects(restassured.ValidationTest)  Time elapsed: 0.6 s  <<< FAILURE!
+java.lang.RuntimeException: 
+com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field "Strap Colour" (class com.example.model.ResponseItem$dataItem), not marked as ignorable (5 known properties: "generation", "price", "year", "Hard disk size", "CPU model"])
+ at [Source: (String)"{"id":"8","name":"Apple Watch Series 8","data":{"Strap Colour":"Elderberry","Case Size":"41mm"}}"; line: 1, column: 65] (through reference chain: com.example.model.ResponseItem["data"]->com.example.model.ResponseItem$dataItem["Strap Colour"])
+	at restassured.ValidationTest.getListObjects(ValidationTest.java:109)
+Caused by: com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: 
+Unrecognized field "Strap Colour" (class com.example.model.ResponseItem$dataItem), not marked as ignorable (5 known properties: "generation", "price", "year", "Hard disk size", "CPU model"])
+ at [Source: (String)"{"id":"8","name":"Apple Watch Series 8","data":{"Strap Colour":"Elderberry","Case Size":"41mm"}}"; line: 1, column: 65] (through reference chain: com.example.model.ResponseItem["data"]->com.example.model.ResponseItem$dataItem["Strap Colour"])
+	at restassured.ValidationTest.getListObjects(ValidationTest.java:109)
+
+partiallyUpdateObjects(restassured.ValidationTest)  Time elapsed: 0.237 s  <<< FAILURE!
+java.lang.RuntimeException: 
+com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field "error" (class com.example.model.ResponseItem), not marked as ignorable (5 known properties: "data", "name", "updatedAt", "id", "createdAt"])
+ at [Source: (String)"{"error":"7 is a reserved id and the data object of it cannot be overridden. You can create a new object via POST request and use new generated by id from it to send a PATCH request."}"; line: 1, column: 11] (through reference chain: com.example.model.ResponseItem["error"])
+	at restassured.ValidationTest.partiallyUpdateObjects(ValidationTest.java:221)
+Caused by: com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: 
+Unrecognized field "error" (class com.example.model.ResponseItem), not marked as ignorable (5 known properties: "data", "name", "updatedAt", "id", "createdAt"])
+ at [Source: (String)"{"error":"7 is a reserved id and the data object of it cannot be overridden. You can create a new object via POST request and use new generated by id from it to send a PATCH request."}"; line: 1, column: 11] (through reference chain: com.example.model.ResponseItem["error"])
+	at restassured.ValidationTest.partiallyUpdateObjects(ValidationTest.java:221)
+
+updateObjects(restassured.ValidationTest)  Time elapsed: 0.166 s  <<< FAILURE!
+java.lang.RuntimeException: 
+com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field "error" (class com.example.model.ResponseItem), not marked as ignorable (5 known properties: "data", "name", "updatedAt", "id", "createdAt"])
+ at [Source: (String)"{"error":"7 is a reserved id and the data object of it cannot be overridden. You can create a new object via POST request and use new generated by id from it to send a PUT request."}"; line: 1, column: 11] (through reference chain: com.example.model.ResponseItem["error"])
+	at restassured.ValidationTest.updateObjects(ValidationTest.java:185)
+Caused by: com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: 
+Unrecognized field "error" (class com.example.model.ResponseItem), not marked as ignorable (5 known properties: "data", "name", "updatedAt", "id", "createdAt"])
+ at [Source: (String)"{"error":"7 is a reserved id and the data object of it cannot be overridden. You can create a new object via POST request and use new generated by id from it to send a PUT request."}"; line: 1, column: 11] (through reference chain: com.example.model.ResponseItem["error"])
+	at restassured.ValidationTest.updateObjects(ValidationTest.java:185)
+

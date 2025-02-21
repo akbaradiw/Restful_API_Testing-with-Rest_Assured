@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="restassured.ValidationTest" time="4.83" tests="7" errors="0" skipped="0" failures="6">
+  <properties>
+    <property name="java.specification.version" value="23"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="D:\kodingan sendiri\RestAssured\restassured\target\test-classes;D:\kodingan sendiri\RestAssured\restassured\target\classes;C:\Users\IMBA PC\.m2\repository\org\testng\testng\7.10.2\testng-7.10.2.jar;C:\Users\IMBA PC\.m2\repository\org\slf4j\slf4j-api\1.7.36\slf4j-api-1.7.36.jar;C:\Users\IMBA PC\.m2\repository\com\beust\jcommander\1.82\jcommander-1.82.jar;C:\Users\IMBA PC\.m2\repository\org\webjars\jquery\3.7.1\jquery-3.7.1.jar;C:\Users\IMBA PC\.m2\repository\io\rest-assured\rest-assured\5.5.0\rest-assured-5.5.0.jar;C:\Users\IMBA PC\.m2\repository\org\apache\groovy\groovy\4.0.22\groovy-4.0.22.jar;C:\Users\IMBA PC\.m2\repository\org\apache\groovy\groovy-xml\4.0.22\groovy-xml-4.0.22.jar;C:\Users\IMBA PC\.m2\repository\org\apache\httpcomponents\httpclient\4.5.13\httpclient-4.5.13.jar;C:\Users\IMBA PC\.m2\repository\org\apache\httpcomponents\httpcore\4.4.13\httpcore-4.4.13.jar;C:\Users\IMBA PC\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\IMBA PC\.m2\repository\commons-codec\commons-codec\1.11\commons-codec-1.11.jar;C:\Users\IMBA PC\.m2\repository\org\apache\httpcomponents\httpmime\4.5.13\httpmime-4.5.13.jar;C:\Users\IMBA PC\.m2\repository\org\hamcrest\hamcrest\2.2\hamcrest-2.2.jar;C:\Users\IMBA PC\.m2\repository\org\ccil\cowan\tagsoup\tagsoup\1.2.1\tagsoup-1.2.1.jar;C:\Users\IMBA PC\.m2\repository\io\rest-assured\json-path\5.5.0\json-path-5.5.0.jar;C:\Users\IMBA PC\.m2\repository\org\apache\groovy\groovy-json\4.0.22\groovy-json-4.0.22.jar;C:\Users\IMBA PC\.m2\repository\io\rest-assured\rest-assured-common\5.5.0\rest-assured-common-5.5.0.jar;C:\Users\IMBA PC\.m2\repository\io\rest-assured\xml-path\5.5.0\xml-path-5.5.0.jar;C:\Users\IMBA PC\.m2\repository\org\apache\commons\commons-lang3\3.11\commons-lang3-3.11.jar;C:\Users\IMBA PC\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.15.0\jackson-databind-2.15.0.jar;C:\Users\IMBA PC\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.15.0\jackson-annotations-2.15.0.jar;C:\Users\IMBA PC\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.15.0\jackson-core-2.15.0.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="user.timezone" value="Asia/Jakarta"/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="java.vm.specification.version" value="23"/>
+    <property name="user.country" value="ID"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-23\bin"/>
+    <property name="sun.java.command" value="C:\Users\IMBAPC~1\AppData\Local\Temp\surefire175619918513678938\surefirebooter10886734473650892116.jar C:\Users\IMBA PC\AppData\Local\Temp\surefire175619918513678938 2025-02-22T00-44-14_823-jvmRun1 surefire4793502482905462255tmp surefire_05051030348881597838tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="test" value="restassured.ValidationTest"/>
+    <property name="surefire.test.class.path" value="D:\kodingan sendiri\RestAssured\restassured\target\test-classes;D:\kodingan sendiri\RestAssured\restassured\target\classes;C:\Users\IMBA PC\.m2\repository\org\testng\testng\7.10.2\testng-7.10.2.jar;C:\Users\IMBA PC\.m2\repository\org\slf4j\slf4j-api\1.7.36\slf4j-api-1.7.36.jar;C:\Users\IMBA PC\.m2\repository\com\beust\jcommander\1.82\jcommander-1.82.jar;C:\Users\IMBA PC\.m2\repository\org\webjars\jquery\3.7.1\jquery-3.7.1.jar;C:\Users\IMBA PC\.m2\repository\io\rest-assured\rest-assured\5.5.0\rest-assured-5.5.0.jar;C:\Users\IMBA PC\.m2\repository\org\apache\groovy\groovy\4.0.22\groovy-4.0.22.jar;C:\Users\IMBA PC\.m2\repository\org\apache\groovy\groovy-xml\4.0.22\groovy-xml-4.0.22.jar;C:\Users\IMBA PC\.m2\repository\org\apache\httpcomponents\httpclient\4.5.13\httpclient-4.5.13.jar;C:\Users\IMBA PC\.m2\repository\org\apache\httpcomponents\httpcore\4.4.13\httpcore-4.4.13.jar;C:\Users\IMBA PC\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\IMBA PC\.m2\repository\commons-codec\commons-codec\1.11\commons-codec-1.11.jar;C:\Users\IMBA PC\.m2\repository\org\apache\httpcomponents\httpmime\4.5.13\httpmime-4.5.13.jar;C:\Users\IMBA PC\.m2\repository\org\hamcrest\hamcrest\2.2\hamcrest-2.2.jar;C:\Users\IMBA PC\.m2\repository\org\ccil\cowan\tagsoup\tagsoup\1.2.1\tagsoup-1.2.1.jar;C:\Users\IMBA PC\.m2\repository\io\rest-assured\json-path\5.5.0\json-path-5.5.0.jar;C:\Users\IMBA PC\.m2\repository\org\apache\groovy\groovy-json\4.0.22\groovy-json-4.0.22.jar;C:\Users\IMBA PC\.m2\repository\io\rest-assured\rest-assured-common\5.5.0\rest-assured-common-5.5.0.jar;C:\Users\IMBA PC\.m2\repository\io\rest-assured\xml-path\5.5.0\xml-path-5.5.0.jar;C:\Users\IMBA PC\.m2\repository\org\apache\commons\commons-lang3\3.11\commons-lang3-3.11.jar;C:\Users\IMBA PC\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.15.0\jackson-databind-2.15.0.jar;C:\Users\IMBA PC\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.15.0\jackson-annotations-2.15.0.jar;C:\Users\IMBA PC\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.15.0\jackson-core-2.15.0.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\IMBA PC"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2025-01-21"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk-23"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="D:\kodingan sendiri\RestAssured\restassured"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="C:\Users\IMBAPC~1\AppData\Local\Temp\surefire175619918513678938\surefirebooter10886734473650892116.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="23.0.2+7-58"/>
+    <property name="user.name" value="IMBA PC"/>
+    <property name="stdout.encoding" value="Cp1252"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="maven.ext.class.path" value="C:\Users\IMBA PC\.vscode\extensions\oracle.oracle-java-23.1.0\nbcode\java\maven-nblib\netbeans-eventspy.jar"/>
+    <property name="localRepository" value="C:\Users\IMBA PC\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\IMBAPC~1\AppData\Local\Temp\"/>
+    <property name="java.version" value="23.0.2"/>
+    <property name="user.dir" value="D:\kodingan sendiri\RestAssured\restassured"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="native.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-23\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Python312\Scripts\;C:\Python312\;C:\Python311\Scripts\;C:\Python311\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files\Git\cmd;C:\ProgramData\chocolatey\bin;D:\NodeJS\C:\Program Files\Java\jdk-23\bin;D:\apache-maven-3.9.9\bin;C:\Users\IMBA PC\AppData\Local\Microsoft\WindowsApps;;C:\Users\IMBA PC\AppData\Roaming\npm;D:\Microsoft VS Code\bin;."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="Cp1252"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="23.0.2+7-58"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="67.0"/>
+  </properties>
+  <testcase name="addObjects" classname="restassured.ValidationTest" time="2.42">
+    <failure message="com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field &quot;timestamp&quot; (class com.example.model.ResponseItem), not marked as ignorable (5 known properties: &quot;data&quot;, &quot;name&quot;, &quot;updatedAt&quot;, &quot;id&quot;, &quot;createdAt&quot;])&#10; at [Source: (String)&quot;{&quot;timestamp&quot;:&quot;2025-02-21T17:44:18.468+00:00&quot;,&quot;status&quot;:405,&quot;error&quot;:&quot;Method Not Allowed&quot;,&quot;path&quot;:&quot;/objects/add&quot;}&quot;; line: 1, column: 15] (through reference chain: com.example.model.ResponseItem[&quot;timestamp&quot;])" type="java.lang.RuntimeException">java.lang.RuntimeException: 
+com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field "timestamp" (class com.example.model.ResponseItem), not marked as ignorable (5 known properties: "data", "name", "updatedAt", "id", "createdAt"])
+ at [Source: (String)"{"timestamp":"2025-02-21T17:44:18.468+00:00","status":405,"error":"Method Not Allowed","path":"/objects/add"}"; line: 1, column: 15] (through reference chain: com.example.model.ResponseItem["timestamp"])
+	at restassured.ValidationTest.addObjects(ValidationTest.java:49)
+Caused by: com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: 
+Unrecognized field "timestamp" (class com.example.model.ResponseItem), not marked as ignorable (5 known properties: "data", "name", "updatedAt", "id", "createdAt"])
+ at [Source: (String)"{"timestamp":"2025-02-21T17:44:18.468+00:00","status":405,"error":"Method Not Allowed","path":"/objects/add"}"; line: 1, column: 15] (through reference chain: com.example.model.ResponseItem["timestamp"])
+	at restassured.ValidationTest.addObjects(ValidationTest.java:49)
+</failure>
+    <system-out><![CDATA[Request method:	POST
+Request URI:	https://api.restful-api.dev/objects/add
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	path=objects
+				method=add
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "name": "Test",
+    "data": {
+        "year": 2019,
+        "price": 2049,
+        "CPU model": "Intel Core i9",
+        "Hard disk size": "1 TB"
+    }
+}
+Add Objects {
+    "timestamp": "2025-02-21T17:44:18.468+00:00",
+    "status": 405,
+    "error": "Method Not Allowed",
+    "path": "/objects/add"
+}
+]]></system-out>
+    <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+]]></system-err>
+  </testcase>
+  <testcase name="deleteObjects" classname="restassured.ValidationTest" time="0.205">
+    <failure message="com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field &quot;error&quot; (class com.example.model.ResponseItem), not marked as ignorable (5 known properties: &quot;data&quot;, &quot;name&quot;, &quot;updatedAt&quot;, &quot;id&quot;, &quot;createdAt&quot;])&#10; at [Source: (String)&quot;{&quot;error&quot;:&quot;7 is a reserved id and the data object of it cannot be deleted. You can create your own new object via POST request and try to send a DELETE request with new generated object id.&quot;}&quot;; line: 1, column: 11] (through reference chain: com.example.model.ResponseItem[&quot;error&quot;])" type="java.lang.RuntimeException">java.lang.RuntimeException: 
+com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field "error" (class com.example.model.ResponseItem), not marked as ignorable (5 known properties: "data", "name", "updatedAt", "id", "createdAt"])
+ at [Source: (String)"{"error":"7 is a reserved id and the data object of it cannot be deleted. You can create your own new object via POST request and try to send a DELETE request with new generated object id."}"; line: 1, column: 11] (through reference chain: com.example.model.ResponseItem["error"])
+	at restassured.ValidationTest.deleteObjects(ValidationTest.java:244)
+Caused by: com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: 
+Unrecognized field "error" (class com.example.model.ResponseItem), not marked as ignorable (5 known properties: "data", "name", "updatedAt", "id", "createdAt"])
+ at [Source: (String)"{"error":"7 is a reserved id and the data object of it cannot be deleted. You can create your own new object via POST request and try to send a DELETE request with new generated object id."}"; line: 1, column: 11] (through reference chain: com.example.model.ResponseItem["error"])
+	at restassured.ValidationTest.deleteObjects(ValidationTest.java:244)
+</failure>
+    <system-out><![CDATA[Request method:	DELETE
+Request URI:	https://api.restful-api.dev/objects/7
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	path=objects
+				id=7
+Headers:		Accept=*/*
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+Delete Objects {
+    "error": "7 is a reserved id and the data object of it cannot be deleted. You can create your own new object via POST request and try to send a DELETE request with new generated object id."
+}
+]]></system-out>
+  </testcase>
+  <testcase name="getAllObjects" classname="restassured.ValidationTest" time="0.215">
+    <failure message="com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot deserialize value of type `com.example.model.ResponseItem` from Array value (token `JsonToken.START_ARRAY`)&#10; at [Source: (String)&quot;[{&quot;id&quot;:&quot;1&quot;,&quot;name&quot;:&quot;Google Pixel 6 Pro&quot;,&quot;data&quot;:{&quot;color&quot;:&quot;Cloudy White&quot;,&quot;capacity&quot;:&quot;128 GB&quot;}},{&quot;id&quot;:&quot;2&quot;,&quot;name&quot;:&quot;Apple iPhone 12 Mini, 256GB, Blue&quot;,&quot;data&quot;:null},{&quot;id&quot;:&quot;3&quot;,&quot;name&quot;:&quot;Apple iPhone 12 Pro Max&quot;,&quot;data&quot;:{&quot;color&quot;:&quot;Cloudy White&quot;,&quot;capacity GB&quot;:512}},{&quot;id&quot;:&quot;4&quot;,&quot;name&quot;:&quot;Apple iPhone 11, 64GB&quot;,&quot;data&quot;:{&quot;price&quot;:389.99,&quot;color&quot;:&quot;Purple&quot;}},{&quot;id&quot;:&quot;5&quot;,&quot;name&quot;:&quot;Samsung Galaxy Z Fold2&quot;,&quot;data&quot;:{&quot;price&quot;:689.99,&quot;color&quot;:&quot;Brown&quot;}},{&quot;id&quot;:&quot;6&quot;,&quot;name&quot;:&quot;Apple AirPods&quot;,&quot;data&quot;:{&quot;generation&quot;:&quot;3rd&quot;,&quot;price&quot;:120}},{&quot;id&quot;:&quot;7&quot;[truncated 739 chars]; line: 1, column: 1]" type="java.lang.RuntimeException">java.lang.RuntimeException: 
+com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot deserialize value of type `com.example.model.ResponseItem` from Array value (token `JsonToken.START_ARRAY`)
+ at [Source: (String)"[{"id":"1","name":"Google Pixel 6 Pro","data":{"color":"Cloudy White","capacity":"128 GB"}},{"id":"2","name":"Apple iPhone 12 Mini, 256GB, Blue","data":null},{"id":"3","name":"Apple iPhone 12 Pro Max","data":{"color":"Cloudy White","capacity GB":512}},{"id":"4","name":"Apple iPhone 11, 64GB","data":{"price":389.99,"color":"Purple"}},{"id":"5","name":"Samsung Galaxy Z Fold2","data":{"price":689.99,"color":"Brown"}},{"id":"6","name":"Apple AirPods","data":{"generation":"3rd","price":120}},{"id":"7"[truncated 739 chars]; line: 1, column: 1]
+	at restassured.ValidationTest.getAllObjects(ValidationTest.java:147)
+Caused by: com.fasterxml.jackson.databind.exc.MismatchedInputException: 
+Cannot deserialize value of type `com.example.model.ResponseItem` from Array value (token `JsonToken.START_ARRAY`)
+ at [Source: (String)"[{"id":"1","name":"Google Pixel 6 Pro","data":{"color":"Cloudy White","capacity":"128 GB"}},{"id":"2","name":"Apple iPhone 12 Mini, 256GB, Blue","data":null},{"id":"3","name":"Apple iPhone 12 Pro Max","data":{"color":"Cloudy White","capacity GB":512}},{"id":"4","name":"Apple iPhone 11, 64GB","data":{"price":389.99,"color":"Purple"}},{"id":"5","name":"Samsung Galaxy Z Fold2","data":{"price":689.99,"color":"Brown"}},{"id":"6","name":"Apple AirPods","data":{"generation":"3rd","price":120}},{"id":"7"[truncated 739 chars]; line: 1, column: 1]
+	at restassured.ValidationTest.getAllObjects(ValidationTest.java:147)
+</failure>
+    <system-out><![CDATA[Request method:	GET
+Request URI:	https://api.restful-api.dev/objects
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+All Objects [
+    {
+        "id": "1",
+        "name": "Google Pixel 6 Pro",
+        "data": {
+            "color": "Cloudy White",
+            "capacity": "128 GB"
+        }
+    },
+    {
+        "id": "2",
+        "name": "Apple iPhone 12 Mini, 256GB, Blue",
+        "data": null
+    },
+    {
+        "id": "3",
+        "name": "Apple iPhone 12 Pro Max",
+        "data": {
+            "color": "Cloudy White",
+            "capacity GB": 512
+        }
+    },
+    {
+        "id": "4",
+        "name": "Apple iPhone 11, 64GB",
+        "data": {
+            "price": 389.99,
+            "color": "Purple"
+        }
+    },
+    {
+        "id": "5",
+        "name": "Samsung Galaxy Z Fold2",
+        "data": {
+            "price": 689.99,
+            "color": "Brown"
+        }
+    },
+    {
+        "id": "6",
+        "name": "Apple AirPods",
+        "data": {
+            "generation": "3rd",
+            "price": 120
+        }
+    },
+    {
+        "id": "7",
+        "name": "Apple MacBook Pro 16",
+        "data": {
+            "year": 2019,
+            "price": 1849.99,
+            "CPU model": "Intel Core i9",
+            "Hard disk size": "1 TB"
+        }
+    },
+    {
+        "id": "8",
+        "name": "Apple Watch Series 8",
+        "data": {
+            "Strap Colour": "Elderberry",
+            "Case Size": "41mm"
+        }
+    },
+    {
+        "id": "9",
+        "name": "Beats Studio3 Wireless",
+        "data": {
+            "Color": "Red",
+            "Description": "High-performance wireless noise cancelling headphones"
+        }
+    },
+    {
+        "id": "10",
+        "name": "Apple iPad Mini 5th Gen",
+        "data": {
+            "Capacity": "64 GB",
+            "Screen size": 7.9
+        }
+    },
+    {
+        "id": "11",
+        "name": "Apple iPad Mini 5th Gen",
+        "data": {
+            "Capacity": "254 GB",
+            "Screen size": 7.9
+        }
+    },
+    {
+        "id": "12",
+        "name": "Apple iPad Air",
+        "data": {
+            "Generation": "4th",
+            "Price": "419.99",
+            "Capacity": "64 GB"
+        }
+    },
+    {
+        "id": "13",
+        "name": "Apple iPad Air",
+        "data": {
+            "Generation": "4th",
+            "Price": "519.99",
+            "Capacity": "256 GB"
+        }
+    }
+]
+]]></system-out>
+  </testcase>
+  <testcase name="getListObjects" classname="restassured.ValidationTest" time="0.6">
+    <failure message="com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field &quot;Strap Colour&quot; (class com.example.model.ResponseItem$dataItem), not marked as ignorable (5 known properties: &quot;generation&quot;, &quot;price&quot;, &quot;year&quot;, &quot;Hard disk size&quot;, &quot;CPU model&quot;])&#10; at [Source: (String)&quot;{&quot;id&quot;:&quot;8&quot;,&quot;name&quot;:&quot;Apple Watch Series 8&quot;,&quot;data&quot;:{&quot;Strap Colour&quot;:&quot;Elderberry&quot;,&quot;Case Size&quot;:&quot;41mm&quot;}}&quot;; line: 1, column: 65] (through reference chain: com.example.model.ResponseItem[&quot;data&quot;]-&gt;com.example.model.ResponseItem$dataItem[&quot;Strap Colour&quot;])" type="java.lang.RuntimeException">java.lang.RuntimeException: 
+com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field "Strap Colour" (class com.example.model.ResponseItem$dataItem), not marked as ignorable (5 known properties: "generation", "price", "year", "Hard disk size", "CPU model"])
+ at [Source: (String)"{"id":"8","name":"Apple Watch Series 8","data":{"Strap Colour":"Elderberry","Case Size":"41mm"}}"; line: 1, column: 65] (through reference chain: com.example.model.ResponseItem["data"]->com.example.model.ResponseItem$dataItem["Strap Colour"])
+	at restassured.ValidationTest.getListObjects(ValidationTest.java:109)
+Caused by: com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: 
+Unrecognized field "Strap Colour" (class com.example.model.ResponseItem$dataItem), not marked as ignorable (5 known properties: "generation", "price", "year", "Hard disk size", "CPU model"])
+ at [Source: (String)"{"id":"8","name":"Apple Watch Series 8","data":{"Strap Colour":"Elderberry","Case Size":"41mm"}}"; line: 1, column: 65] (through reference chain: com.example.model.ResponseItem["data"]->com.example.model.ResponseItem$dataItem["Strap Colour"])
+	at restassured.ValidationTest.getListObjects(ValidationTest.java:109)
+</failure>
+    <system-out><![CDATA[Request method:	GET
+Request URI:	https://api.restful-api.dev/objects/6
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	id=6
+Headers:		Accept=*/*
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+Object with ID 6: {
+    "id": "6",
+    "name": "Apple AirPods",
+    "data": {
+        "generation": "3rd",
+        "price": 120
+    }
+}
+Retrieved object name: Apple AirPods
+Request method:	GET
+Request URI:	https://api.restful-api.dev/objects/7
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	id=7
+Headers:		Accept=*/*
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+Object with ID 7: {
+    "id": "7",
+    "name": "Apple MacBook Pro 16",
+    "data": {
+        "year": 2019,
+        "price": 1849.99,
+        "CPU model": "Intel Core i9",
+        "Hard disk size": "1 TB"
+    }
+}
+Retrieved object name: Apple MacBook Pro 16
+Request method:	GET
+Request URI:	https://api.restful-api.dev/objects/8
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	id=8
+Headers:		Accept=*/*
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+Object with ID 8: {
+    "id": "8",
+    "name": "Apple Watch Series 8",
+    "data": {
+        "Strap Colour": "Elderberry",
+        "Case Size": "41mm"
+    }
+}
+]]></system-out>
+  </testcase>
+  <testcase name="getSingleObjects" classname="restassured.ValidationTest" time="0.192"/>
+  <testcase name="partiallyUpdateObjects" classname="restassured.ValidationTest" time="0.237">
+    <failure message="com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field &quot;error&quot; (class com.example.model.ResponseItem), not marked as ignorable (5 known properties: &quot;data&quot;, &quot;name&quot;, &quot;updatedAt&quot;, &quot;id&quot;, &quot;createdAt&quot;])&#10; at [Source: (String)&quot;{&quot;error&quot;:&quot;7 is a reserved id and the data object of it cannot be overridden. You can create a new object via POST request and use new generated by id from it to send a PATCH request.&quot;}&quot;; line: 1, column: 11] (through reference chain: com.example.model.ResponseItem[&quot;error&quot;])" type="java.lang.RuntimeException">java.lang.RuntimeException: 
+com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field "error" (class com.example.model.ResponseItem), not marked as ignorable (5 known properties: "data", "name", "updatedAt", "id", "createdAt"])
+ at [Source: (String)"{"error":"7 is a reserved id and the data object of it cannot be overridden. You can create a new object via POST request and use new generated by id from it to send a PATCH request."}"; line: 1, column: 11] (through reference chain: com.example.model.ResponseItem["error"])
+	at restassured.ValidationTest.partiallyUpdateObjects(ValidationTest.java:221)
+Caused by: com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: 
+Unrecognized field "error" (class com.example.model.ResponseItem), not marked as ignorable (5 known properties: "data", "name", "updatedAt", "id", "createdAt"])
+ at [Source: (String)"{"error":"7 is a reserved id and the data object of it cannot be overridden. You can create a new object via POST request and use new generated by id from it to send a PATCH request."}"; line: 1, column: 11] (through reference chain: com.example.model.ResponseItem["error"])
+	at restassured.ValidationTest.partiallyUpdateObjects(ValidationTest.java:221)
+</failure>
+    <system-out><![CDATA[Request method:	PATCH
+Request URI:	https://api.restful-api.dev/objects/7
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	path=objects
+				id=7
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "name": "Singkong MacBook Pro 16"
+}
+Partially Update Objects {
+    "error": "7 is a reserved id and the data object of it cannot be overridden. You can create a new object via POST request and use new generated by id from it to send a PATCH request."
+}
+]]></system-out>
+  </testcase>
+  <testcase name="updateObjects" classname="restassured.ValidationTest" time="0.166">
+    <failure message="com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field &quot;error&quot; (class com.example.model.ResponseItem), not marked as ignorable (5 known properties: &quot;data&quot;, &quot;name&quot;, &quot;updatedAt&quot;, &quot;id&quot;, &quot;createdAt&quot;])&#10; at [Source: (String)&quot;{&quot;error&quot;:&quot;7 is a reserved id and the data object of it cannot be overridden. You can create a new object via POST request and use new generated by id from it to send a PUT request.&quot;}&quot;; line: 1, column: 11] (through reference chain: com.example.model.ResponseItem[&quot;error&quot;])" type="java.lang.RuntimeException">java.lang.RuntimeException: 
+com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field "error" (class com.example.model.ResponseItem), not marked as ignorable (5 known properties: "data", "name", "updatedAt", "id", "createdAt"])
+ at [Source: (String)"{"error":"7 is a reserved id and the data object of it cannot be overridden. You can create a new object via POST request and use new generated by id from it to send a PUT request."}"; line: 1, column: 11] (through reference chain: com.example.model.ResponseItem["error"])
+	at restassured.ValidationTest.updateObjects(ValidationTest.java:185)
+Caused by: com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: 
+Unrecognized field "error" (class com.example.model.ResponseItem), not marked as ignorable (5 known properties: "data", "name", "updatedAt", "id", "createdAt"])
+ at [Source: (String)"{"error":"7 is a reserved id and the data object of it cannot be overridden. You can create a new object via POST request and use new generated by id from it to send a PUT request."}"; line: 1, column: 11] (through reference chain: com.example.model.ResponseItem["error"])
+	at restassured.ValidationTest.updateObjects(ValidationTest.java:185)
+</failure>
+    <system-out><![CDATA[Request method:	PUT
+Request URI:	https://api.restful-api.dev/objects/7
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	path=objects
+				id=7
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "name": "Singkong MacBook Pro 16",
+    "data": {
+        "year": 2219,
+        "price": 1249.99,
+        "CPU model": "Ontel Core i9",
+        "Hard disk size": "2 TB"
+    }
+}
+Update {
+    "error": "7 is a reserved id and the data object of it cannot be overridden. You can create a new object via POST request and use new generated by id from it to send a PUT request."
+}
+]]></system-out>
+  </testcase>
+</testsuite>
