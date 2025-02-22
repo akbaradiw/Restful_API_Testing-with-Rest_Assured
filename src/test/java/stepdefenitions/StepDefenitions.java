@@ -53,26 +53,13 @@ public void getAllProducts() {
 @When("I add item to list {string}")    
 public void addProducts (String payload) throws  JsonMappingException, JsonProcessingException {
     dataRequest = new DataRequest();
-
-    RestAssured.baseURI = "https://api.restful-api.dev";
-    RequestSpecification requestSpecification = RestAssured
-                                                .given();
-    for(Map.Entry<String, String> entry : dataRequest.addItem().entrySet()){
+ for(Map.Entry<String, String> entry : dataRequest.addItem().entrySet()){
             if (entry.getKey().equals(payload)) {
                 json = entry.getValue();
                 break;
             }
         }
 
-        Response response = requestSpecification
-        .log()
-        .all()
-        .pathParam("path", "objects")
-        .pathParam("method", "add")
-        .body(json)
-        .contentType("application/json")
-        .when()                        
-        .post("{path}/{method}");  
         
 System.out.println("Add Objects " + response.asPrettyString());    
 
