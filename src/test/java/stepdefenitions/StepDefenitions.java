@@ -1,11 +1,21 @@
 package stepdefenitions;
 
+import java.util.Map;
+
+import org.testng.Assert;
+
+import com.example.model.ResponseItem;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.JsonMappingException;
+
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.restassured.RestAssured;
+import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
+import resources.DataRequest;
 
 public class StepDefenitions {
 
@@ -13,7 +23,12 @@ public class StepDefenitions {
     // When I add item to list  
     // Then The item is available 
 
-@Given("A list of Product are available")
+ResponseItem responseItem;
+String json;
+DataRequest dataRequest;
+
+ // non outline 
+@Given("A list of item are available")
 public void getAllProducts() {
     System.out.println("getAllProducts");
 
@@ -26,39 +41,34 @@ public void getAllProducts() {
                         .when()                        
                         .get("objects");  
     System.out.println("getAllProducts" + response.asPrettyString());
+
+    JsonPath addJsonPath = response.jsonPath();
+    responseItem = addJsonPath.getObject("", ResponseItem.class);
+
+    Assert.assertEquals(response.statusCode(), 200);
+    Assert.assertEquals(responseItem .name,"Apple AirPods");
     
 }
 
-@When("I add Product to list")
-public void addProduct() {
-    String json = "{"
-    + "\"name\": \"Apple MacBook Pro 16\","
-    + "\"data\": {"
-    + "   \"year\": 2019,"
-    + "   \"price\": 1849.99,"
-    + "   \"CPU model\": \"Intel Core i9\","
-    + "   \"Hard disk size\": \"1 TB\""
-    + " }"
-    + "}";
+@When("I add item to list {string}")    
+public void addProducts (String payload) throws  JsonMappingException, JsonProcessingException {
+    dataRequest = new DataRequest();
 
     RestAssured.baseURI = "https://api.restful-api.dev";
     RequestSpecification requestSpecification = RestAssured
-                                                .given();    
-    Response response = requestSpecification
-                        .log()    
-                        .all()
-                        .pathParam("path", "objects")    
-                        .pathParam("method", "add")
-                        .body(json)
-                        .contentType("application/json")
-                        .when()                        
-                        .post("{path}/{method}");  
-    System.out.println("addProduct " + response.asPrettyString());
-
-    
+                                                .given();
+    for(Map.Entry<String, String> entry : dataRequest.addItem().entrySet()){
+            if (entry.getKey().equals(payload)) {
+                json = entry.getValue();
+                break;
+            }
+        }
 }
 
-@Then("The Product is available")
+
+// non outline
+
+@Then("The item is available")
 public void getProduct() {
 
     RestAssured.baseURI = "https://api.restful-api.dev";
@@ -73,8 +83,16 @@ public void getProduct() {
                         .get("{path}/{id}");  
     System.out.println("getProduct" + response.asPrettyString());
 
-}
+    JsonPath addJsonPath = response.jsonPath();
+    responseItem = addJsonPath.getObject("", ResponseItem.class);
 
+    
+    Assert.assertEquals(response.statusCode(), 200);
+    Assert.assertEquals(responseItem.name,"Apple AirPods");
+    Assert.assertEquals(responseItem.data.generation, "3rd");
+    Assert.assertEquals(responseItem.data.price, 120);
+
+} 
 }
 
 
