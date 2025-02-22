@@ -53,10 +53,10 @@ public void addObjects(){
     Assert.assertEquals(responseItem.name,"Test");
     Assert.assertNotNull(responseItem.id);
     Assert.assertNotNull(responseItem.createdAt);
-    Assert.assertEquals(responseItem.dataItem.year, 2019);
-    Assert.assertEquals(responseItem.dataItem.price, 2049);
-    Assert.assertEquals(responseItem.dataItem.cpuModel, "Intel Core i9");
-    Assert.assertEquals(responseItem.dataItem.hardDiskSize, "1 TB");
+    Assert.assertEquals(responseItem.data.year, 2019);
+    Assert.assertEquals(responseItem.data.price, 2049);
+    Assert.assertEquals(responseItem.data.CPUModel, "Intel Core i9");
+    Assert.assertEquals(responseItem.data.hardDiskSize, "1 TB");
 }
 
 @Test
@@ -81,8 +81,8 @@ public void getSingleObjects(){
 
     Assert.assertEquals(response.statusCode(), 200);
     Assert.assertEquals(responseItem.name,"Apple AirPods");
-    Assert.assertEquals(responseItem.dataItem.generation, "3rd");
-    Assert.assertEquals(responseItem.dataItem.price, 120);  
+    Assert.assertEquals(responseItem.data.generation, "3rd");
+    Assert.assertEquals(responseItem.data.price, 120);  
 
    
 
@@ -114,17 +114,17 @@ public void getListObjects() {
 
         // Jika hanya ingin memeriksa objek "Apple AirPods", pastikan ID-nya benar
         if (responseItem.name.equals("Apple AirPods")) {
-            Assert.assertEquals(responseItem.dataItem.generation, "3rd");
-            Assert.assertEquals(responseItem.dataItem.price, 120);
+            Assert.assertEquals(responseItem.data.generation, "3rd");
+            Assert.assertEquals(responseItem.data.price, 120);
         }
         if (responseItem.name.equals("Macbook Air")) {
-            Assert.assertEquals(responseItem.dataItem.generation, "13");
-            Assert.assertEquals(responseItem.dataItem.price, 1200);
+            Assert.assertEquals(responseItem.data.generation, "13");
+            Assert.assertEquals(responseItem.data.price, 1200);
         }
 
     if (responseItem.name.equals("Apple Watch Series 8")) {
-            Assert.assertEquals(responseItem.dataItem.generation, "8");
-            Assert.assertEquals(responseItem.dataItem.price, 1200);
+            Assert.assertEquals(responseItem.data.generation, "8");
+            Assert.assertEquals(responseItem.data.price, 1200);
         }
     }
 }
@@ -187,10 +187,10 @@ public void updateObjects(){
 
     Assert.assertEquals(response.statusCode(), 200);
     Assert.assertEquals(responseItem.name,"Singkong MacBook Pro 16");
-    Assert.assertEquals(responseItem.dataItem.year, 2219);
-    Assert.assertEquals(responseItem.dataItem.price, 1249.99);
-    Assert.assertEquals(responseItem.dataItem.cpuModel, "Ontel Core i9");
-    Assert.assertEquals(responseItem.dataItem.hardDiskSize, "2 TB");
+    Assert.assertEquals(responseItem.data.year, 2219);
+    Assert.assertEquals(responseItem.data.price, 1249.99);
+    Assert.assertEquals(responseItem.data.CPUModel, "Ontel Core i9");
+    Assert.assertEquals(responseItem.data.hardDiskSize, "2 TB");
        
 }
 

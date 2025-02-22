@@ -3,16 +3,11 @@
 <suite thread-count="1" name="Failed suite [Surefire suite]" verbose="0">
   <test thread-count="1" name="Surefire test(failed)" verbose="0">
     <classes>
-      <class name="restassured.ValidationTest">
+      <class name="scenario.RestE2ETest">
         <methods>
-          <include name="updateObjects"/>
-          <include name="addObjects"/>
-          <include name="deleteObjects"/>
-          <include name="getAllObjects"/>
-          <include name="partiallyUpdateObjects"/>
-          <include name="getListObjects"/>
+          <include name="scenarioE2E"/>
         </methods>
-      </class> <!-- restassured.ValidationTest -->
+      </class> <!-- scenario.RestE2ETest -->
     </classes>
   </test> <!-- Surefire test(failed) -->
 </suite> <!-- Failed suite [Surefire suite] -->
