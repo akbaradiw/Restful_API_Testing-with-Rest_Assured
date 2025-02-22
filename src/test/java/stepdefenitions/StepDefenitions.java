@@ -63,6 +63,22 @@ public void addProducts (String payload) throws  JsonMappingException, JsonProce
                 break;
             }
         }
+
+        Response response = requestSpecification
+        .log()
+        .all()
+        .pathParam("path", "objects")
+        .pathParam("method", "add")
+        .body(json)
+        .contentType("application/json")
+        .when()                        
+        .post("{path}/{method}");  
+        
+System.out.println("Add Objects " + response.asPrettyString());    
+
+JsonPath addJsonPath = response.jsonPath();
+
+responseItem = addJsonPath.getObject("", ResponseItem.class);
 }
 
 
