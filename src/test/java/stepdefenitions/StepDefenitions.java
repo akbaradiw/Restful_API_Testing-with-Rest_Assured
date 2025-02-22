@@ -79,6 +79,15 @@ System.out.println("Add Objects " + response.asPrettyString());
 JsonPath addJsonPath = response.jsonPath();
 
 responseItem = addJsonPath.getObject("", ResponseItem.class);
+
+Assert.assertEquals(response.statusCode(), 200);
+Assert.assertEquals(responseItem.name,"Handuk Hitam");
+Assert.assertNotNull(responseItem.id);
+Assert.assertNotNull(responseItem.createdAt);
+Assert.assertEquals(responseItem.data.year, 2029);
+Assert.assertEquals(responseItem.data.price, 1849);
+Assert.assertEquals(responseItem.data.CPUModel, "Intel Core i9");
+Assert.assertEquals(responseItem.data.hardDiskSize, "1 TB");
 }
 
 
