@@ -1,5 +1,7 @@
 package apiengine;
 
+import com.example.constant.Constant;
+
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
@@ -7,11 +9,15 @@ import io.restassured.specification.RequestSpecification;
 public class Endpoints {
 RequestSpecification requestSpecification; 
 
+public Endpoints() {
+            RestAssured.baseURI = Constant.BASE_URL;
+        requestSpecification = RestAssured
+                                .given();
+}
+
+
 
     public Response  getAllProducts(String path ) {
- RestAssured.baseURI = "https://api.restful-api.dev";
-    requestSpecification = RestAssured
-                                                .given();
     Response response = requestSpecification
                         .log()
                         .all()
@@ -21,13 +27,8 @@ RequestSpecification requestSpecification;
 
 }  
 
-public Response addProduct(String path, String json, String method) { {
-
-    RestAssured.baseURI = "https://api.restful-api.dev";
-        RequestSpecification requestSpecification = RestAssured
-                                                    .given();
-
-        Response response = requestSpecification
+public Response addProduct(String path, String json, String method)  {
+   Response response = requestSpecification
         .log()
         .all()
         .pathParam("path", "objects")
@@ -40,8 +41,19 @@ public Response addProduct(String path, String json, String method) { {
 
 }
 
+public Response getProduct (String path, String id) {
+   Response response = requestSpecification
+                        .log()
+                        .all()
+                        .pathParam("id", "6")
+                        .pathParam("path", "objects")
+                        .when()                        
+                        .get("{path}/{id}");  
+    return response;
+
   
 }
+
 
 
 }
