@@ -1,0 +1,6 @@
+stepdefenitions\StepDefenitions.class
+scenario\RestE2ETest.class
+restassured\RestfulApi.class
+resources\DataRequest.class
+restassured\ValidationTest.class
+runner\TestRunner.class
