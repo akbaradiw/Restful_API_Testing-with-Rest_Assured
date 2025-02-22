@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-02-22T11:11:13 WIB" name="Surefire suite" finished-at="2025-02-22T11:11:16 WIB" duration-ms="3140">
+  <suite started-at="2025-02-22T12:29:19 WIB" name="Surefire suite" finished-at="2025-02-22T12:29:22 WIB" duration-ms="3057">
     <groups>
     </groups>
-    <test started-at="2025-02-22T11:11:13 WIB" name="Surefire test" finished-at="2025-02-22T11:11:16 WIB" duration-ms="3140">
+    <test started-at="2025-02-22T12:29:19 WIB" name="Surefire test" finished-at="2025-02-22T12:29:22 WIB" duration-ms="3057">
       <class name="scenario.RestE2ETest">
-        <test-method signature="scenarioE2E()[pri:0, instance:scenario.RestE2ETest@2893de87]" started-at="2025-02-22T11:11:13 WIB" name="scenarioE2E" finished-at="2025-02-22T11:11:16 WIB" duration-ms="3090" status="FAIL">
+        <test-method signature="scenarioE2E()[pri:0, instance:scenario.RestE2ETest@3c87521]" started-at="2025-02-22T12:29:19 WIB" name="scenarioE2E" finished-at="2025-02-22T12:29:22 WIB" duration-ms="3008" status="FAIL">
           <exception class="java.lang.RuntimeException">
             <message>
               <![CDATA[com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field "timestamp" (class com.example.model.ResponseItem), not marked as ignorable (5 known properties: "data", "name", "updatedAt", "id", "createdAt"])
- at [Source: (String)"{"timestamp":"2025-02-22T04:11:16.916+00:00","status":405,"error":"Method Not Allowed","path":"/objects/add"}"; line: 1, column: 15] (through reference chain: com.example.model.ResponseItem["timestamp"])]]>
+ at [Source: (String)"{"timestamp":"2025-02-22T05:29:22.897+00:00","status":405,"error":"Method Not Allowed","path":"/objects/add"}"; line: 1, column: 15] (through reference chain: com.example.model.ResponseItem["timestamp"])]]>
             </message>
             <full-stacktrace>
               <![CDATA[java.lang.RuntimeException: com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field "timestamp" (class com.example.model.ResponseItem), not marked as ignorable (5 known properties: "data", "name", "updatedAt", "id", "createdAt"])
- at [Source: (String)"{"timestamp":"2025-02-22T04:11:16.916+00:00","status":405,"error":"Method Not Allowed","path":"/objects/add"}"; line: 1, column: 15] (through reference chain: com.example.model.ResponseItem["timestamp"])
+ at [Source: (String)"{"timestamp":"2025-02-22T05:29:22.897+00:00","status":405,"error":"Method Not Allowed","path":"/objects/add"}"; line: 1, column: 15] (through reference chain: com.example.model.ResponseItem["timestamp"])
 at io.restassured.internal.path.json.mapping.JsonPathJackson2ObjectDeserializer.deserialize(JsonPathJackson2ObjectDeserializer.java:30)
 at io.restassured.internal.path.json.mapping.JsonObjectDeserializer.deserializeWithJackson2(JsonObjectDeserializer.java:93)
 at io.restassured.internal.path.json.mapping.JsonObjectDeserializer.deserialize(JsonObjectDeserializer.java:53)
@@ -54,7 +54,7 @@ at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter
 at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
 at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
 Caused by: com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field "timestamp" (class com.example.model.ResponseItem), not marked as ignorable (5 known properties: "data", "name", "updatedAt", "id", "createdAt"])
- at [Source: (String)"{"timestamp":"2025-02-22T04:11:16.916+00:00","status":405,"error":"Method Not Allowed","path":"/objects/add"}"; line: 1, column: 15] (through reference chain: com.example.model.ResponseItem["timestamp"])
+ at [Source: (String)"{"timestamp":"2025-02-22T05:29:22.897+00:00","status":405,"error":"Method Not Allowed","path":"/objects/add"}"; line: 1, column: 15] (through reference chain: com.example.model.ResponseItem["timestamp"])
 at com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException.from(UnrecognizedPropertyException.java:61)
 at com.fasterxml.jackson.databind.DeserializationContext.handleUnknownProperty(DeserializationContext.java:1138)
 at com.fasterxml.jackson.databind.deser.std.StdDeserializer.handleUnknownProperty(StdDeserializer.java:2224)

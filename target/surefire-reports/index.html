@@ -130,7 +130,7 @@
                   </a> <!-- scenarioE2E -->
                   <span class="method-name">scenarioE2E</span>
                   <div class="stack-trace">java.lang.RuntimeException: com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field &quot;timestamp&quot; (class com.example.model.ResponseItem), not marked as ignorable (5 known properties: &quot;data&quot;, &quot;name&quot;, &quot;updatedAt&quot;, &quot;id&quot;, &quot;createdAt&quot;])
- at [Source: (String)&quot;{&quot;timestamp&quot;:&quot;2025-02-22T04:11:16.916+00:00&quot;,&quot;status&quot;:405,&quot;error&quot;:&quot;Method Not Allowed&quot;,&quot;path&quot;:&quot;/objects/add&quot;}&quot;; line: 1, column: 15] (through reference chain: com.example.model.ResponseItem[&quot;timestamp&quot;])
+ at [Source: (String)&quot;{&quot;timestamp&quot;:&quot;2025-02-22T05:29:22.897+00:00&quot;,&quot;status&quot;:405,&quot;error&quot;:&quot;Method Not Allowed&quot;,&quot;path&quot;:&quot;/objects/add&quot;}&quot;; line: 1, column: 15] (through reference chain: com.example.model.ResponseItem[&quot;timestamp&quot;])
 	at io.restassured.internal.path.json.mapping.JsonPathJackson2ObjectDeserializer.deserialize(JsonPathJackson2ObjectDeserializer.java:30)
 	at io.restassured.internal.path.json.mapping.JsonObjectDeserializer.deserializeWithJackson2(JsonObjectDeserializer.java:93)
 	at io.restassured.internal.path.json.mapping.JsonObjectDeserializer.deserialize(JsonObjectDeserializer.java:53)
@@ -139,7 +139,7 @@
 	at scenario.RestE2ETest.scenarioE2E(RestE2ETest.java:48)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
 Caused by: com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field &quot;timestamp&quot; (class com.example.model.ResponseItem), not marked as ignorable (5 known properties: &quot;data&quot;, &quot;name&quot;, &quot;updatedAt&quot;, &quot;id&quot;, &quot;createdAt&quot;])
- at [Source: (String)&quot;{&quot;timestamp&quot;:&quot;2025-02-22T04:11:16.916+00:00&quot;,&quot;status&quot;:405,&quot;error&quot;:&quot;Method Not Allowed&quot;,&quot;path&quot;:&quot;/objects/add&quot;}&quot;; line: 1, column: 15] (through reference chain: com.example.model.ResponseItem[&quot;timestamp&quot;])
+ at [Source: (String)&quot;{&quot;timestamp&quot;:&quot;2025-02-22T05:29:22.897+00:00&quot;,&quot;status&quot;:405,&quot;error&quot;:&quot;Method Not Allowed&quot;,&quot;path&quot;:&quot;/objects/add&quot;}&quot;; line: 1, column: 15] (through reference chain: com.example.model.ResponseItem[&quot;timestamp&quot;])
 	at com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException.from(UnrecognizedPropertyException.java:61)
 	at com.fasterxml.jackson.databind.DeserializationContext.handleUnknownProperty(DeserializationContext.java:1138)
 	at com.fasterxml.jackson.databind.deser.std.StdDeserializer.handleUnknownProperty(StdDeserializer.java:2224)
@@ -213,7 +213,7 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'scenarioE2E')
 data.setCell(0, 2, 'scenario.RestE2ETest')
-data.setCell(0, 3, 3090);
+data.setCell(0, 3, 3008);
 window.suiteTableData['Surefire_suite']= { tableData: data, tableDiv: 'times-div-Surefire_suite'}
 return data;
 }
