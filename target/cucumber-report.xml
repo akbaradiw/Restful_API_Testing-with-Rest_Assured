@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="0.272" tests="1" skipped="0" failures="1" errors="0" timestamp="2025-02-22T06:46:04.615464200Z">
-<testcase classname="API Testing" name="As a user I can add new data" time="0.025">
-<failure/>
+<testsuite name="Cucumber" time="7.024" tests="2" skipped="0" failures="0" errors="0" timestamp="2025-02-22T14:35:35.398103700Z">
+<testcase classname="API Testing" name="As a user I can add new data - #1.1" time="5.831">
 <system-out><![CDATA[
-Given A list of item are available..........................................undefined
-When I add item to list.....................................................skipped
-Then The item is available..................................................skipped
+Given A list of item are available..........................................passed
+When I add item to list "addItem"...........................................passed
+Then The item is available..................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="API Testing" name="As a user I can add new data - #1.2" time="0.811">
+<system-out><![CDATA[
+Given A list of item are available..........................................passed
+When I add item to list "addItem2"..........................................passed
+Then The item is available..................................................passed
 ]]></system-out>
 </testcase>
 </testsuite>

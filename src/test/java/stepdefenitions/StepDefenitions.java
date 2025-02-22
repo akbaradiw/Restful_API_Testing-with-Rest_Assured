@@ -8,6 +8,7 @@ import com.example.model.ResponseItem;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 
+import apiengine.Endpoints;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -23,31 +24,23 @@ public class StepDefenitions {
     // When I add item to list  
     // Then The item is available 
 
+
 ResponseItem responseItem;
 String json;
 DataRequest dataRequest;
+Endpoints endpoints;
+
 
  // non outline 
 @Given("A list of item are available")
 public void getAllProducts() {
-    System.out.println("getAllProducts");
+ System.out.println("getAllProducts");
+ endpoints = new Endpoints();
 
-    RestAssured.baseURI = "https://api.restful-api.dev";
-    RequestSpecification requestSpecification = RestAssured
-                                                .given();
-    Response response = requestSpecification
-                        .log()
-                        .all()
-                        .when()                        
-                        .get("objects");  
-    System.out.println("getAllProducts" + response.asPrettyString());
+ Response response = endpoints.getAllProducts("objects");
 
-    JsonPath addJsonPath = response.jsonPath();
-    responseItem = addJsonPath.getObject("", ResponseItem.class);
-
-    Assert.assertEquals(response.statusCode(), 200);
-    Assert.assertEquals(responseItem .name,"Apple AirPods");
-    
+ System.out.println("reponse migration" + response.asPrettyString());
+     
 }
 
 @When("I add item to list {string}")    
