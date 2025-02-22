@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="0.272" tests="1" skipped="0" failures="1" errors="0" timestamp="2025-02-22T06:46:04.615464200Z">
+<testcase classname="API Testing" name="As a user I can add new data" time="0.025">
+<failure/>
+<system-out><![CDATA[
+Given A list of item are available..........................................undefined
+When I add item to list.....................................................skipped
+Then The item is available..................................................skipped
+]]></system-out>
+</testcase>
+</testsuite>
